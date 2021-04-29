@@ -1,44 +1,8 @@
 import Header from 'components/Header'
+import ServiceCard from 'components/ServiceCard'
+import servicesData from 'lib/services-data'
 
 function IndexPage() {
-  const servicesData = [
-    {
-      id: 'search_doctor',
-      title: "Search doctor",
-      description: "Choose your doctor from thousands of specialist, general, and trusted hospitals",
-      icon: "/img/services-01.png"
-    },
-    {
-      id: 'online_pharmacy',
-      title: "Online pharmacy",
-      description: "Buy  your medicines with our mobile application with a simple delivery system",
-      icon: "/img/services-02.png"
-    },
-    {
-      id: 'consultation',
-      title: "Consultation",
-      description: "Free consultation with our trusted doctors and get the best recomendations",
-      icon: "/img/services-03.png"
-    },
-    {
-      id: 'details_info',
-      title: "Details info",
-      description: "Free consultation with our trusted doctors and get the best recomendations",
-      icon: "/img/services-04.png"
-    },
-    {
-      id: 'emergency_care',
-      title: "Emergency care",
-      description: "You can get 24/7 urgent care for yourself or your children and your lovely family",
-      icon: "/img/services-05.png"
-    },
-    {
-      id: 'tracking',
-      title: "Tracking",
-      description: "Track and save your medical history and health data ",
-      icon: "/img/services-06.png"
-    }
-  ]
   return (
     <div className="container w-full md:w-auto mx-auto md:px-4">
       <Header />
@@ -62,13 +26,7 @@ function IndexPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-20 md:mt-0">
           {servicesData.map(item => (
-            <div className="rounded-lg shadow-xl px-10 py-16 bg-white" key={item.id} id={item.id}>
-              <div className="h-24 flex items-end mb-6">
-                <img src={item.icon} alt="icon" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-              <p className="font-light leading-normal text-gray-500">{item.description}</p>
-            </div>
+            <ServiceCard key={item.id} item={item} />
           ))}
           </div>
           <footer className="text-center py-16">
