@@ -1,3 +1,5 @@
+import Header from 'components/Header'
+
 function IndexPage() {
   const servicesData = [
     {
@@ -38,48 +40,27 @@ function IndexPage() {
     }
   ]
   return (
-    <div className="container mx-auto px-4">
-      <header className="flex justify-between py-12">
-        <a href="#" className="text-gray-800 font-bold">Healary</a>
-        <nav>
-          <ul className="flex">
-            <li className="text-gray-800 text-lg px-5">
-              <a href="#">Home</a>
-            </li>
-            <li className="text-gray-500 text-lg px-5 hover:text-gray-800 hover:underline">
-              <a href="#">Find a doctor</a>
-            </li>
-            <li className="text-gray-500 text-lg px-5 hover:text-gray-800 hover:underline">
-              <a href="#">Apps</a>
-            </li>
-            <li className="text-gray-500 text-lg px-5 hover:text-gray-800 hover:underline">
-              <a href="#">Testimonials</a>
-            </li>
-            <li className="text-gray-500 text-lg px-5 hover:text-gray-800 hover:underline">
-              <a href="#">About us</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main className="container mx-auto px-4">
-        <section className="flex-center pb-24">
-          <div className="w-2/5">
+    <div className="container w-full md:w-auto mx-auto md:px-4">
+      <Header />
+      <main className="container mx-auto px-8 md:px-4 py-16 md:py-0">
+        <section className="flex-center md:pb-24">
+          <div className="md:w-2/5">
             <h1 className="text-5xl font-bold leading-snug mb-4">Virtual healthcare<br />for you</h1>
             <p className="text-xl text-gray-500 font-light mb-6">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online<br />for everyone</p>
             <button className="bg-blue-500 text-white py-3 px-10 rounded-full">Consult today</button>
           </div>
-          <div>
+          <div className="hidden md:block">
             <img src="/img/hero-illustration.png" alt="Illustration" width="693" height="598" />
           </div>
         </section>
-        <section className="container mx-auto px-4 py-24 relative">
+        <section className="container mx-auto md:px-4 py-20 md:py-24 relative">
           <div className="index-services-bg" />
-          <div className="px-20 mb-20">
-            <h2 className="text-3xl font-bold text-center mb-6">Our services</h2>
-            <hr className="w-16 border-black border-solid border-b-2 mx-auto mb-8" />
-            <p className="text-xl text-gray-500 font-light text-center">We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
+          <div className="md:px-20 md:mb-20">
+            <h2 className="text-3xl font-bold md:text-center mb-6">Our services</h2>
+            <hr className="w-16 border-black border-solid border-b-2 md:mx-auto mb-8" />
+            <p className="text-md text-gray-500 font-light md:text-center">We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4 mt-20 md:mt-0">
           {servicesData.map(item => (
             <div className="rounded-lg shadow-xl px-10 py-16 bg-white" key={item.id} id={item.id}>
               <div className="h-24 flex items-end mb-6">

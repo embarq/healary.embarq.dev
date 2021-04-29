@@ -2,24 +2,20 @@
 
 /* Write your own custom base styles here */
 
-/* Start purging... */
 @tailwind components;
-/* Stop purging. */
+@tailwind utilities;
 
 /* Write you own custom component styles here */
-.btn-blue {
-  @apply bg-blue-600 text-white py-3 px-6 rounded-full;
+@layer components {
+  .btn-blue {
+    @apply bg-blue-600 text-white py-3 px-6 rounded-full;
+  }
+  
+  .flex-center {
+    @apply flex justify-between items-center;
+  }
 }
 
-.flex-center {
-  @apply flex justify-between items-center;
-}
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */
 .index-services-bg {
   position: absolute;
   top: 5%;
